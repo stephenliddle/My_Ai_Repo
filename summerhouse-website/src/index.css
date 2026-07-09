@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+
+  --color-bark-950: #1c1712;
+  --color-bark-900: #26201a;
+  --color-bark-800: #362d24;
+  --color-bark-700: #4a3d31;
+  --color-bark-600: #6b5843;
+
+  --color-moss-700: #3f5a45;
+  --color-moss-600: #4f6e54;
+  --color-moss-500: #63855f;
+  --color-moss-100: #e7efe6;
+  --color-moss-50: #f3f7f1;
+
+  --color-sun-500: #d9a34a;
+  --color-sun-400: #e6b968;
+  --color-sun-100: #faeed6;
+
+  --color-cream-50: #fdfbf6;
+  --color-cream-100: #f7f2e9;
+  --color-cream-200: #efe7d8;
+
+  --shadow-card: 0 1px 2px rgba(28, 23, 18, 0.06), 0 12px 24px -12px rgba(28, 23, 18, 0.18);
+  --shadow-card-hover: 0 4px 8px rgba(28, 23, 18, 0.08), 0 20px 40px -16px rgba(28, 23, 18, 0.28);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream-50);
+  color: var(--color-bark-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-sun-400);
+  color: var(--color-bark-950);
+}
+
+/* Slim, elegant scrollbar for the app shell's scrollable panes */
+.thin-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-moss-500) transparent;
+}
+.thin-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(63, 90, 69, 0.35);
+  border-radius: 999px;
+}
+.thin-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(63, 90, 69, 0.55);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.35s ease-out both;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.animate-modal-in {
+  animation: modal-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
