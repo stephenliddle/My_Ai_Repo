@@ -1,15 +1,16 @@
 export interface Product {
   id: string;
-  slug: string;
+  number: number;
   name: string;
   tagline: string;
+  price: string | null;
+  body: string;
   image: string;
-  descriptionFile: string;
 }
 
 export interface GalleryItem {
   id: string;
-  slug: string;
+  number: number;
   title: string;
   caption: string;
   image: string;

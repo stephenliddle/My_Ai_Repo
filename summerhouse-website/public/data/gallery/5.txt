@@ -1,0 +1,3 @@
+Title: Woodland Clearing
+Caption: The Sandringham, tucked into a private clearing.
+Related: gallery:5, product:5, gallery:1, gallery:3

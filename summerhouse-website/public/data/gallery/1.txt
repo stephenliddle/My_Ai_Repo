@@ -1,0 +1,3 @@
+Title: Cotswold Garden
+Caption: The Oxford, turning slowly beside a honey-stone terrace.
+Related: gallery:1, product:1, gallery:5, hero

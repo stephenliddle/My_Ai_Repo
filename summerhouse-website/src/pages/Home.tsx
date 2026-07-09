@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { products } from "../data/products";
+import { useProducts } from "../hooks/useContent";
 
 const highlights = [
   {
@@ -17,6 +17,8 @@ const highlights = [
 ];
 
 export default function Home() {
+  const { items: products } = useProducts();
+
   return (
     <div>
       <section className="relative overflow-hidden">
@@ -71,7 +73,9 @@ export default function Home() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-moss-600">The Range</p>
             <h2 className="mt-2 font-display text-2xl font-semibold text-bark-950 sm:text-3xl">
-              Six summerhouses, one company.
+              {products.length > 0
+                ? `${products.length} summerhouse${products.length === 1 ? "" : "s"}, one company.`
+                : "Our summerhouses, one company."}
             </h2>
           </div>
           <Link
@@ -84,27 +88,29 @@ export default function Home() {
             </svg>
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
-          {products.map((product) => (
-            <Link
-              key={product.id}
-              to="/products"
-              className="group overflow-hidden rounded-xl border border-bark-900/8 bg-white shadow-sm transition-shadow hover:shadow-[var(--shadow-card)]"
-            >
-              <div className="aspect-[4/3] overflow-hidden bg-moss-100">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  loading="lazy"
-                  className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="px-3 py-2.5 sm:px-4 sm:py-3">
-                <p className="font-display text-sm font-semibold text-bark-950 sm:text-base">{product.name}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        {products.length > 0 && (
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
+            {products.map((product) => (
+              <Link
+                key={product.id}
+                to="/products"
+                className="group overflow-hidden rounded-xl border border-bark-900/8 bg-white shadow-sm transition-shadow hover:shadow-[var(--shadow-card)]"
+              >
+                <div className="aspect-[4/3] overflow-hidden bg-moss-100">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    loading="lazy"
+                    className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="px-3 py-2.5 sm:px-4 sm:py-3">
+                  <p className="font-display text-sm font-semibold text-bark-950 sm:text-base">{product.name}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );

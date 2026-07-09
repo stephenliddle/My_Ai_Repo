@@ -1,0 +1,3 @@
+Title: Winter Frost
+Caption: The Balmoral holds warmth through the coldest mornings.
+Related: gallery:3, product:3, gallery:4, product:6

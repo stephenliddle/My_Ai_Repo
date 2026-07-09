@@ -12,7 +12,7 @@ export default function RevolvingDemo() {
       <div className="mx-auto max-w-4xl px-6 py-10 sm:px-10 lg:px-14">
         <VideoShowcase
           src="/videos/revolving-demo.mp4"
-          poster="/images/gallery/evening-illumination.jpg"
+          poster="/images/gallery/6.jpg"
           title="The revolving mechanism, demonstrated"
         />
         <p className="mt-6 text-sm leading-relaxed text-bark-700">

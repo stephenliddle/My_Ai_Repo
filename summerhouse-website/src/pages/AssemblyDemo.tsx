@@ -12,7 +12,7 @@ export default function AssemblyDemo() {
       <div className="mx-auto max-w-4xl px-6 py-10 sm:px-10 lg:px-14">
         <VideoShowcase
           src="/videos/assembly-demo.mp4"
-          poster="/images/gallery/cotswold-garden.jpg"
+          poster="/images/gallery/1.jpg"
           title="On-site assembly, start to finish"
         />
         <p className="mt-6 text-sm leading-relaxed text-bark-700">
