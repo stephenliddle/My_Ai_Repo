@@ -14,7 +14,7 @@ export default function Products() {
       <PageHeader
         eyebrow="Our Range"
         title="Products"
-        description="Revolving summerhouses, from a compact garden retreat to a grand entertaining pavilion. Every model turns a full 360 degrees and is built to order in Britain."
+        description="Explore our range of beautifully crafted revolving summerhouses. From the classic Appleton to the spacious Hornby Plus, find the perfect garden retreat."
       />
 
       <div className="mx-auto max-w-6xl px-6 py-10 sm:px-10 lg:px-14">

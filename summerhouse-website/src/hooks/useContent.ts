@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
-import { loadGallery, loadProducts } from "../lib/content";
 import type { GalleryItem, Product } from "../types";
 
 type LoadState<T> = {
   items: T[];
   status: "loading" | "ready" | "error";
 };
+
+async function fetchJson<T>(url: string): Promise<T> {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Request failed: ${response.status}`);
+  }
+  return response.json() as Promise<T>;
+}
 
 export function useProducts(): LoadState<Product> {
   const [state, setState] = useState<LoadState<Product>>({
@@ -15,7 +22,7 @@ export function useProducts(): LoadState<Product> {
 
   useEffect(() => {
     let cancelled = false;
-    loadProducts()
+    fetchJson<Product[]>("http://localhost:3001/api/products")
       .then((items) => {
         if (!cancelled) setState({ items, status: "ready" });
       })
@@ -38,7 +45,7 @@ export function useGallery(): LoadState<GalleryItem> {
 
   useEffect(() => {
     let cancelled = false;
-    loadGallery()
+    fetchJson<GalleryItem[]>("http://localhost:3001/api/gallery")
       .then((items) => {
         if (!cancelled) setState({ items, status: "ready" });
       })

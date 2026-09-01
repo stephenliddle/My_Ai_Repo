@@ -40,6 +40,23 @@ function resolveRelatedRef(ref: string): string | null {
     : `/images/products/${num}.jpg`;
 }
 
+function hasMeaningfulContent(raw: string): boolean {
+  const trimmed = raw.trim();
+  if (!trimmed) return false;
+
+  const { headers, body } = parseHeadersAndBody(raw);
+  return Boolean(
+    headers.name ||
+      headers.title ||
+      headers.caption ||
+      headers.tagline ||
+      headers.price ||
+      headers.related ||
+      body.trim() ||
+      /[A-Za-z]/.test(trimmed)
+  );
+}
+
 async function fetchText(url: string): Promise<string | null> {
   try {
     const res = await fetch(url);
@@ -67,37 +84,41 @@ async function loadNumberedTexts(dataDir: string): Promise<{ n: number; raw: str
 export async function loadProducts(): Promise<Product[]> {
   const files = await loadNumberedTexts("/data/products");
 
-  return files.map(({ n, raw }) => {
-    const { headers, body } = parseHeadersAndBody(raw);
-    return {
-      id: String(n),
-      number: n,
-      name: headers.name ?? `Product ${n}`,
-      tagline: headers.tagline ?? "",
-      price: headers.price ?? null,
-      body,
-      image: `/images/products/${n}.jpg`,
-    };
-  });
+  return files
+    .filter(({ raw }) => hasMeaningfulContent(raw))
+    .map(({ n, raw }) => {
+      const { headers, body } = parseHeadersAndBody(raw);
+      return {
+        id: String(n),
+        number: n,
+        name: headers.name ?? `Product ${n}`,
+        tagline: headers.tagline ?? "",
+        price: headers.price ?? null,
+        body,
+        image: `/images/products/${n}.jpg`,
+      };
+    });
 }
 
 export async function loadGallery(): Promise<GalleryItem[]> {
   const files = await loadNumberedTexts("/data/gallery");
 
-  return files.map(({ n, raw }) => {
-    const { headers } = parseHeadersAndBody(raw);
-    const related = (headers.related ?? "")
-      .split(",")
-      .map(resolveRelatedRef)
-      .filter((src): src is string => src !== null);
+  return files
+    .filter(({ raw }) => hasMeaningfulContent(raw))
+    .map(({ n, raw }) => {
+      const { headers } = parseHeadersAndBody(raw);
+      const related = (headers.related ?? "")
+        .split(",")
+        .map(resolveRelatedRef)
+        .filter((src): src is string => src !== null);
 
-    return {
-      id: String(n),
-      number: n,
-      title: headers.title ?? `Gallery ${n}`,
-      caption: headers.caption ?? "",
-      image: `/images/gallery/${n}.jpg`,
-      relatedImages: related.length > 0 ? related : [`/images/gallery/${n}.jpg`],
-    };
-  });
+      return {
+        id: String(n),
+        number: n,
+        title: headers.title ?? `Gallery ${n}`,
+        caption: headers.caption ?? "",
+        image: `/images/gallery/${n}.jpg`,
+        relatedImages: related.length > 0 ? related : [`/images/gallery/${n}.jpg`],
+      };
+    });
 }

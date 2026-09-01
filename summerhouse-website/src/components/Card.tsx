@@ -21,9 +21,9 @@ export default function Card({
 }: CardProps) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-bark-900/8 bg-white shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">
-      <header className="border-b border-bark-900/8 px-5 py-4">
-        <h3 className="font-display text-lg font-semibold text-bark-950">{headerTitle}</h3>
-        {headerSubtitle && <p className="mt-1 text-sm text-bark-700">{headerSubtitle}</p>}
+      <header className="bg-bark-950 px-3 py-2 text-center">
+        <h3 className="text-sm font-semibold uppercase tracking-[0.08em] text-cream-50">{headerTitle}</h3>
+        {headerSubtitle && <p className="mt-1 text-[11px] leading-relaxed text-cream-100/80">{headerSubtitle}</p>}
       </header>
 
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-moss-100">

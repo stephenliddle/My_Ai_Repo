@@ -1,17 +1,13 @@
-Name: The Balmoral
-Tagline: Highland-inspired timber framing with a steep shingled roof.
-Price: £11,200
+Name: Hornby
+Tagline: Compact and classic, designed for intimate garden settings.
+Price: £8,995
 
-Inspired by Highland hunting lodges, the Balmoral pairs a steeply pitched,
-shingled roof with dark-stained timber framing built to shrug off wind and
-rain. A wood-burning stove flue is fitted as standard, so it turns to face
-the view in every month of the year.
+The Hornby model offers a compact yet comfortable space, perfect for intimate garden settings in the Yorkshire countryside.
 
 Specification:
-- Diameter: 3.6m | Floor area: 10.2 sqm
-- Structure: pressure-treated Douglas fir
-- Roof: steep-pitch cedar shingle with snow guards
-- Turning mechanism: hand-cranked with weatherproof gearing
-- Glazing: triple-glazed, two aspects plus a stable-style door
-- Delivery & assembly: included within 100 miles, nationwide by quote
-- Guarantee: 12-year structural guarantee
+- Dimensions: 2000mm x 2300mm x 2200mm High
+- Structure: Siberian Larch where possible
+- Roof: Traditional joinery details
+- Turning mechanism: Smooth 360-degree manual rotation
+- Glazing: Compact classic design
+- Delivery & assembly: by quote

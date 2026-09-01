@@ -1,17 +1,13 @@
-Name: The Blenheim
-Tagline: Our largest model - a genuine architectural statement piece.
-Price: £24,900
+Name: Hornby Plus
+Tagline: Extended space and premium finishes for generous garden living.
+Price: £12,995
 
-The Blenheim is our largest and most ambitious build - a genuine garden
-building rather than a mere summerhouse, with room for a full seating
-suite, a writing desk and more. Every Blenheim is built to order and
-finished to the client's specification.
+The Hornby Plus model features extended space and premium finishes.
 
 Specification:
-- Diameter: 5.0m | Floor area: 19.6 sqm
-- Structure: engineered oak frame on a steel turning ring
-- Roof: natural slate, fully insulated
-- Turning mechanism: motorised, app-controlled, 360-degree rotation
-- Glazing: floor-to-ceiling toughened glass, eight aspects
-- Delivery & assembly: included nationwide, dedicated project manager
-- Guarantee: 20-year structural guarantee
+- Dimensions: 2600mm x 2600mm x 2500mm High
+- Structure: Siberian Larch with marine treatment
+- Roof: Marine-grade finishes
+- Turning mechanism: Smooth 360-degree manual rotation
+- Glazing: Extra opening rear window and Electrics
+- Delivery & assembly: by quote

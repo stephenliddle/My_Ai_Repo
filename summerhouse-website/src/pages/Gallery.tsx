@@ -14,7 +14,7 @@ export default function Gallery() {
       <PageHeader
         eyebrow="In the Garden"
         title="Gallery"
-        description="A look at our summerhouses in the gardens they were built for, in every season. Select View More on any scene for extra photographs."
+        description="Browse our gallery of beautifully installed revolving summerhouses across the UK. See our craftsmanship in gardens from Lancashire to Edinburgh."
       />
 
       <div className="mx-auto max-w-6xl px-6 py-10 sm:px-10 lg:px-14">

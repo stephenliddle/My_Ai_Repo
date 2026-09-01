@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "number": 1,
+    "name": "Appleton Plus",
+    "tagline": "Spacious comfort for larger gardens and family gatherings.",
+    "price": "£10,495",
+    "body": "The Appleton Plus offers enhanced space and luxury, perfect for larger gatherings or a more spacious retreat.",
+    "image": "/images/products/1.jpg"
+  },
+  {
+    "id": "2",
+    "number": 2,
+    "name": "Appleton",
+    "tagline": "Traditional design with timeless elegance for smaller gardens.",
+    "price": "£9,995",
+    "body": "The Appleton model combines classic design with modern craftsmanship, ideal for gardens seeking timeless elegance.",
+    "image": "/images/products/2.jpg"
+  },
+  {
+    "id": "3",
+    "number": 3,
+    "name": "Hornby",
+    "tagline": "Compact and classic, designed for intimate garden settings.",
+    "price": "£8,995",
+    "body": "The Hornby model offers a compact yet comfortable space, perfect for intimate garden settings in the Yorkshire countryside.",
+    "image": "/images/products/3.jpg"
+  },
+  {
+    "id": "4",
+    "number": 4,
+    "name": "George Bernard Shaw",
+    "tagline": "A creative retreat inspired by a famous writer's studio.",
+    "price": "£11,495",
+    "body": "Named after the famous writer who had his own rotating writing hut, the GBS model is perfect for creative pursuits and peaceful reflection.",
+    "image": "/images/products/4.jpg"
+  },
+  {
+    "id": "5",
+    "number": 5,
+    "name": "The Revolving Base",
+    "tagline": "The engineered heart of every rotating summerhouse.",
+    "price": "£2,495",
+    "body": "Our revolutionary rotating base system, the heart of every revolving summerhouse. Available as a standalone product or integrated into any of our models.",
+    "image": "/images/products/5.jpg"
+  },
+  {
+    "id": "6",
+    "number": 6,
+    "name": "Hornby Plus",
+    "tagline": "Extended space and premium finishes for generous garden living.",
+    "price": "£12,995",
+    "body": "The Hornby Plus model features extended space and premium finishes.",
+    "image": "/images/products/6.jpg"
+  }
+]

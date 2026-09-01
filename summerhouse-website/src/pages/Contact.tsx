@@ -2,10 +2,9 @@ import { useState, type FormEvent } from "react";
 import PageHeader from "../components/PageHeader";
 
 const contactDetails = [
-  { label: "Workshop & Showground", value: "The Old Sawmill, Reepham Road, Norfolk, NR10 4JT" },
-  { label: "Telephone", value: "01603 555 0142" },
-  { label: "Email", value: "enquiries@revolvingsummerhouse.co.uk" },
-  { label: "Opening Hours", value: "Mon\u2013Sat, 9am\u20135pm" },
+  { label: "Email", value: "info@revolvingsummerhouses.co.uk" },
+  { label: "Phone", value: "Contact via email for phone details" },
+  { label: "Service Area", value: "Nationwide UK installations" },
 ];
 
 export default function Contact() {
@@ -17,6 +16,8 @@ export default function Contact() {
     const form = new FormData(e.currentTarget);
     const name = String(form.get("name") ?? "").trim();
     const email = String(form.get("email") ?? "").trim();
+    const phone = String(form.get("phone") ?? "").trim();
+    const subject = String(form.get("subject") ?? "").trim();
     const message = String(form.get("message") ?? "").trim();
 
     const nextErrors: Record<string, string> = {};
@@ -24,7 +25,11 @@ export default function Contact() {
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       nextErrors.email = "Please enter a valid email address.";
     }
+    if (!subject) nextErrors.subject = "Please enter a subject.";
     if (!message) nextErrors.message = "Please tell us a little about your enquiry.";
+    if (!phone && !message) {
+      // keep the form simple; phone is optional
+    }
 
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length === 0) {
@@ -38,12 +43,12 @@ export default function Contact() {
       <PageHeader
         eyebrow="Get in Touch"
         title="Contact Us"
-        description="Whether you're choosing between models or planning a bespoke build, our team is happy to help."
+        description="We'd love to discuss your garden project and answer any questions about our Victorian revolving summerhouses."
       />
 
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-6 py-10 sm:px-10 lg:grid-cols-5 lg:px-14">
         <div className="lg:col-span-2">
-          <h2 className="font-display text-lg font-semibold text-bark-950">Visit or write to us</h2>
+          <h2 className="font-display text-lg font-semibold text-bark-950">Send Us a Message</h2>
           <dl className="mt-4 space-y-4">
             {contactDetails.map((d) => (
               <div key={d.label}>
@@ -73,42 +78,69 @@ export default function Contact() {
             <form onSubmit={handleSubmit} noValidate className="space-y-5">
               <div>
                 <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-bark-950">
-                  Name
+                  Your Name *
                 </label>
                 <input
                   id="name"
                   name="name"
                   type="text"
                   className="w-full rounded-lg border border-bark-900/15 bg-white px-3.5 py-2.5 text-sm text-bark-950 outline-none ring-moss-500 placeholder:text-bark-700/40 focus:ring-2"
-                  placeholder="Your full name"
+                  placeholder="John Smith"
                 />
                 {errors.name && <p className="mt-1.5 text-xs text-red-600">{errors.name}</p>}
               </div>
 
               <div>
                 <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-bark-950">
-                  Email
+                  Email Address *
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   className="w-full rounded-lg border border-bark-900/15 bg-white px-3.5 py-2.5 text-sm text-bark-950 outline-none ring-moss-500 placeholder:text-bark-700/40 focus:ring-2"
-                  placeholder="you@example.com"
+                  placeholder="john@example.com"
                 />
                 {errors.email && <p className="mt-1.5 text-xs text-red-600">{errors.email}</p>}
               </div>
 
               <div>
+                <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-bark-950">
+                  Phone Number
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  className="w-full rounded-lg border border-bark-900/15 bg-white px-3.5 py-2.5 text-sm text-bark-950 outline-none ring-moss-500 placeholder:text-bark-700/40 focus:ring-2"
+                  placeholder="01234 567890"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-bark-950">
+                  Subject *
+                </label>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  className="w-full rounded-lg border border-bark-900/15 bg-white px-3.5 py-2.5 text-sm text-bark-950 outline-none ring-moss-500 placeholder:text-bark-700/40 focus:ring-2"
+                  placeholder="Enquiry about Appleton model"
+                />
+                {errors.subject && <p className="mt-1.5 text-xs text-red-600">{errors.subject}</p>}
+              </div>
+
+              <div>
                 <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-bark-950">
-                  Message
+                  Message *
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={5}
                   className="w-full resize-none rounded-lg border border-bark-900/15 bg-white px-3.5 py-2.5 text-sm text-bark-950 outline-none ring-moss-500 placeholder:text-bark-700/40 focus:ring-2"
-                  placeholder="Tell us about your garden, and which model interests you."
+                  placeholder="Tell us about your project..."
                 />
                 {errors.message && <p className="mt-1.5 text-xs text-red-600">{errors.message}</p>}
               </div>
@@ -119,6 +151,7 @@ export default function Contact() {
               >
                 Send Message
               </button>
+              <p className="text-xs text-bark-600">* Required fields</p>
             </form>
           )}
         </div>

@@ -1,17 +1,13 @@
-Name: The Chatsworth
-Tagline: Full-height glazing and a slender cupola for stately homes.
-Price: £18,750
+Name: George Bernard Shaw
+Tagline: A creative retreat inspired by a famous writer's studio.
+Price: £11,495
 
-Designed for stately gardens, the Chatsworth is defined by its full-height
-glazing and slender central cupola, which fills the interior with light
-from dawn until dusk. It is our tallest model, built to be seen as much as
-it is to be sat in.
+Named after the famous writer who had his own rotating writing hut, the GBS model is perfect for creative pursuits and peaceful reflection.
 
 Specification:
-- Diameter: 4.0m | Floor area: 12.6 sqm
-- Structure: kiln-dried European oak
-- Roof: standing-seam zinc with glazed cupola
-- Turning mechanism: motorised, app-controlled, 360-degree rotation
-- Glazing: floor-to-ceiling toughened glass, six aspects
-- Delivery & assembly: included nationwide
-- Guarantee: 15-year structural guarantee
+- Dimensions: 2300mm x 2300mm x 2400mm High
+- Structure: Siberian Larch where possible
+- Roof: Historic heritage styling
+- Turning mechanism: Smooth 360-degree manual rotation
+- Glazing: Optimal natural lighting
+- Delivery & assembly: by quote
