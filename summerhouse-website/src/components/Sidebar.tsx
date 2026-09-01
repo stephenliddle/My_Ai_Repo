@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { navItems } from "../data/nav";
 
 interface SidebarProps {
@@ -7,6 +7,9 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ open, onNavigate }: SidebarProps) {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <>
       {open && (
@@ -17,7 +20,9 @@ export default function Sidebar({ open, onNavigate }: SidebarProps) {
         />
       )}
       <aside
-        className={`thin-scroll fixed inset-y-0 left-0 z-40 flex w-72 shrink-0 flex-col overflow-y-auto border-r border-bark-900/10 bg-bark-950 pb-6 pt-16 text-cream-100 transition-transform duration-300 ease-out lg:sticky lg:top-16 lg:z-0 lg:max-h-[calc(100vh-4rem)] lg:translate-x-0 lg:pt-0 ${
+        className={`thin-scroll fixed inset-y-0 left-0 z-40 flex w-72 shrink-0 flex-col overflow-y-auto border-r border-bark-900/10 bg-bark-950 pb-6 pt-16 text-cream-100 transition-transform duration-300 ease-out lg:sticky lg:top-16 lg:z-0 lg:translate-x-0 lg:pt-0 ${
+          isHome ? "lg:h-[calc(100vh-8rem)] lg:max-h-[calc(100vh-8rem)]" : "lg:max-h-[calc(100vh-4rem)]"
+        } ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >

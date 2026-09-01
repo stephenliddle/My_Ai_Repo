@@ -25,14 +25,48 @@ npm run preview   # preview the production build locally
   `VideoShowcase`).
 - `src/pages/` — one component per route (Home, Products, Gallery, Revolving
   Demo, Assembly Demo, Bolton & Paul, Going International, About, Contact).
-- `src/data/` — content data for the navigation menu, products and gallery
-  items.
-- `public/data/products/*.txt` — plain-text description + price for each
-  product, fetched client-side and shown in the "View More" popup.
-- `public/images/` — generated product/gallery photography (optimized JPEGs).
+- `src/data/nav.ts` — navigation menu labels and routes.
+- `src/lib/content.ts` — loads numbered product/gallery files from `public/`.
+- `public/data/products/N.txt` + `public/images/products/N.jpg` — products.
+- `public/data/gallery/N.txt` + `public/images/gallery/N.jpg` — gallery.
 - `public/videos/` — drop `revolving-demo.mp4` and `assembly-demo.mp4` here to
   have the Revolving Demo / Assembly Demo pages play real footage; until then
   they show a polished "coming soon" placeholder.
+
+## Editing products & gallery (no code changes)
+
+Items are numbered files. The app probes `1.txt`, `2.txt`, … until a number
+is missing, then stops. Screen order follows those numbers.
+
+**Swap content:** replace `3.jpg` or edit `3.txt` and refresh.
+
+**Add an item:** create the next number (e.g. `7.txt` + `7.jpg`).
+
+**Remove an item:** delete that number’s files, then renumber higher items
+down so there is no gap (a missing `4` stops discovery at 3).
+
+**Reorder:** rename files (e.g. swap `2` ↔ `5`).
+
+### Product text format (`public/data/products/1.txt`)
+
+```text
+Name: The Oxford
+Tagline: Our classic octagonal turner...
+Price: £8,950
+
+Body paragraphs and specification go here...
+```
+
+### Gallery text format (`public/data/gallery/1.txt`)
+
+```text
+Title: Cotswold Garden
+Caption: The Oxford, turning slowly beside a honey-stone terrace.
+Related: gallery:1, product:1, gallery:5, hero
+```
+
+`Related` is a comma-separated list of image refs used in the View More
+popup: `gallery:N`, `product:N`, or `hero`.
 
 ## Pages
 

@@ -30,12 +30,6 @@ export default function Header({ onMenuToggle }: HeaderProps) {
           </span>
         </Link>
       </div>
-      <Link
-        to="/contact"
-        className="hidden shrink-0 items-center rounded-full bg-moss-700 px-4 py-2 text-sm font-medium text-cream-50 shadow-sm transition-colors hover:bg-moss-600 sm:inline-flex"
-      >
-        Get a Quote
-      </Link>
     </header>
   );
 }

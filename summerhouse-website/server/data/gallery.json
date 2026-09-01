@@ -1,0 +1,76 @@
+[
+  {
+    "id": "1",
+    "number": 1,
+    "title": "Appleton Plus in Lancashire",
+    "caption": "AppletonPlus, Lancashire, Cooking Apple Green and Strong White.",
+    "image": "/images/gallery/1.jpg",
+    "relatedImages": [
+      "/images/gallery/1.jpg",
+      "/images/gallery/2.jpg",
+      "/images/gallery/5.jpg",
+      "/images/hero.jpg"
+    ]
+  },
+  {
+    "id": "2",
+    "number": 2,
+    "title": "Appleton in Edinburgh",
+    "caption": "Appleton in Edinburgh, Picture Gallery Red/Strong White.",
+    "image": "/images/gallery/2.jpg",
+    "relatedImages": [
+      "/images/gallery/2.jpg",
+      "/images/gallery/6.jpg",
+      "/images/gallery/1.jpg"
+    ]
+  },
+  {
+    "id": "3",
+    "number": 3,
+    "title": "Hornby in North Yorkshire",
+    "caption": "Hornby in North Yorkshire. Lichen/Cream",
+    "image": "/images/gallery/3.jpg",
+    "relatedImages": [
+      "/images/gallery/3.jpg",
+      "/images/gallery/4.jpg",
+      "/images/gallery/5.jpg",
+      "/images/products/6.jpg"
+    ]
+  },
+  {
+    "id": "4",
+    "number": 4,
+    "title": "George Bernard Shaw",
+    "caption": "George Bernard Shaw with folding Writing Table, New York State, Studio Green and White",
+    "image": "/images/gallery/4.jpg",
+    "relatedImages": [
+      "/images/gallery/4.jpg",
+      "/images/gallery/2.jpg",
+      "/images/gallery/1.jpg"
+    ]
+  },
+  {
+    "id": "5",
+    "number": 5,
+    "title": "The Revolving Base",
+    "caption": "Precision-engineered rotating summerhouse base.",
+    "image": "/images/gallery/5.jpg",
+    "relatedImages": [
+      "/images/gallery/5.jpg",
+      "/images/gallery/1.jpg",
+      "/images/gallery/3.jpg"
+    ]
+  },
+  {
+    "id": "6",
+    "number": 6,
+    "title": "Hornby Plus Isle of Man",
+    "caption": "Hornby Plus with Electrics and folding Table, Isle of Man, Green Blue and Strong White.",
+    "image": "/images/gallery/6.jpg",
+    "relatedImages": [
+      "/images/gallery/6.jpg",
+      "/images/products/6.jpg",
+      "/images/hero.jpg"
+    ]
+  }
+]

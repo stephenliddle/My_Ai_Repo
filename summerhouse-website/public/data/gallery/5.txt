@@ -1,0 +1,3 @@
+Title: The Revolving Base
+Caption: Precision-engineered rotating summerhouse base.
+Related: gallery:5, product:5, gallery:1, gallery:3
